@@ -1,0 +1,108 @@
+/* CreatePost.css */
+
+/* General Styles */
+#create-post-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+/* Pure Black Background */
+    color: #fff;
+    padding: 20px;
+}
+  
+/* Title */
+#create-post-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff; /* White Text */
+}
+
+/* Form Styles */
+#create-post-form {
+    background: rgba(255, 255, 255, 0.1); /* Dark Transparent Form */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 500%;
+    max-width: 500px;
+    margin: 50%;
+    margin-top: 1%;
+}
+
+
+/* Input & Textarea Styles */
+#post-title,
+#post-content {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    background: #fff; /* White Background */
+    color: #000; /* Black Text */
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+#post-title::placeholder,
+#post-content::placeholder {
+    color: rgba(0, 0, 0, 0.5); /* Dark Placeholder */
+}
+
+#post-title:focus,
+#post-content:focus {
+    border: 2px solid #777; /* Gray Border on Focus */
+    box-shadow: 0 0 10px rgba(119, 119, 119, 0.7);
+}
+
+/* Button Styles */
+#submit-post {
+    background: linear-gradient(135deg, #222, #444); /* Dark Gray Gradient */
+    padding: 12px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+#submit-post:hover {
+    background: linear-gradient(135deg, #111, #333); /* Slightly Darker Hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+#submit-post:active {
+    transform: translateY(2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #create-post-title {
+        font-size: 2rem;
+    }
+
+    #create-post-form {
+        padding: 20px;
+    }
+
+    #post-title,
+    #post-content {
+        font-size: 0.9rem;
+    }
+
+    #submit-post {
+        font-size: 1rem;
+    }
+}

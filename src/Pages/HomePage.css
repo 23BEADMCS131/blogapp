@@ -1,0 +1,111 @@
+/* HomePage.css */
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}  
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Homepage Container */
+.homepage-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  background: transparent; /* Removed black gradient */
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 20px auto;
+  line-height: 1.6;
+  opacity: 0.9;
+  animation: fadeIn 2s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Button Styles */
+.btn-primary {
+  background-color: rgba(85, 85, 85, 0.8); /* Semi-transparent button */
+  padding: 12px 35px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  color: #fff;
+  border: 2px solid rgba(85, 85, 85, 0.8);
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  background-color: rgba(34, 34, 34, 0.8); /* Slightly darker hover effect */
+  border-color: rgba(34, 34, 34, 0.8);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(2px);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    padding: 10px 30px;
+  }
+}

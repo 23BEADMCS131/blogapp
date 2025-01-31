@@ -1,0 +1,178 @@
+/* General Styles */
+body {
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main Container */
+.contact-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto; /* This ensures the container stays centered */
+  padding: 60px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Ensures the content starts from the top */
+  align-items: center; /* Centers content horizontally */
+  min-height: 100vh; /* Makes sure it takes up the full height */
+  position: relative;
+  top: 200px;
+}
+
+/* Header Styling */
+header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px; /* Adds space below the header */
+}
+
+/* Form Styling */
+.container {
+  text-align: center;
+  width:100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+  text-align: left;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn {
+  margin-top: 10px;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Rating Section */
+.rating-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.star {
+  font-size: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+
+.filled {
+  color: gold;
+}
+
+/* Footer Styles */
+.footer {
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  border-radius: 10px;
+}
+
+.footer h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 28px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #ffcc00;
+  transform: translateY(-3px);
+}
+
+/* Ensure Content Visibility */
+html, body {
+  height: 100%;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: auto;
+  justify-content: flex-start; /* Keeps everything aligned at the top */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .star {
+    font-size: 25px;
+  }
+
+  .social-icon {
+    font-size: 24px;
+  }
+}
