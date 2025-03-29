@@ -9,7 +9,7 @@ const MyBlog = () => {
   const [newContent, setNewContent] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:4000/posts')
+    axios.get('https://blogbackend-1-h4wy.onrender.com/posts')
       .then(response => {
         setPosts(response.data);
       })
@@ -19,7 +19,7 @@ const MyBlog = () => {
   // Delete Blog
   const deleteBlog = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:4000/blogs/delete/${id}`);
+      const response = await axios.delete(`https://blogbackend-1-h4wy.onrender.com/delete/${id}`);
       alert(response.data.message); // Show message to user
       setPosts(posts.filter(post => post._id !== id)); // Remove the deleted blog from the state
     } catch (error) {
@@ -30,7 +30,7 @@ const MyBlog = () => {
   // Update Blog
   const updateBlog = async (id) => {
     try {
-      const response = await fetch(`http://localhost:4000/blogs/update/${id}`, {
+      const response = await fetch(`https://blogbackend-1-h4wy.onrender.com/update/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title: newTitle, content: newContent }),

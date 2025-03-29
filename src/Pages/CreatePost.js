@@ -11,7 +11,7 @@ const CreatePost = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:4000/createpost', { 
+            const response = await axios.post('https://blogbackend-1-h4wy.onrender.com/createpost', { 
                 title, 
                 content 
             });
